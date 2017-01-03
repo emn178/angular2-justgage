@@ -20,6 +20,21 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       this.max = 200;
       this.value = 123;
+
+      setTimeout(() => {
+        this.options = {
+          id: "gauge",
+          value: 99,
+          min: 0,
+          max: 999,
+          title: "Users"
+        };
+
+        setTimeout(() => {
+          this.max = 200;
+          this.value = 173;
+        }, 1000);
+      }, 1000);
     }, 3000);
   }
 }

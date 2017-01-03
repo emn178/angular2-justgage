@@ -17,16 +17,25 @@ export class JustgageComponent implements OnInit, OnChanges {
   constructor(private elementRef: ElementRef) { }
 
   ngOnInit() {
+    this.create();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (this.justgage) {
+      if (changes['options']) {
+        this.elementRef.nativeElement.innerHTML = '';
+        this.create();
+      } else if (changes['max'] || changes['value']) {
+        this.justgage.refresh(this.value, this.max);
+      }
+    }
+  }
+
+  private create() {
     delete this.options.id;
     this.options.parentNode = this.elementRef.nativeElement;
     this.options.max = this.max;
     this.options.value = this.value;
     this.justgage = new JustGage(this.options);
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    if (this.justgage && (changes['max'] || changes['value'])) {
-      this.justgage.refresh(this.value, this.max);
-    }
   }
 }
