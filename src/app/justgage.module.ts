@@ -1,4 +1,4 @@
-import 'raphael';
+window['Raphael'] = require('raphael');
 import 'justgage';
 
 import { BrowserModule } from '@angular/platform-browser';

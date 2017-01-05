@@ -21,7 +21,6 @@
         "styles.scss"
       ],
       "scripts": [
-        "../node_modules/raphael/raphael.js"
       ],
       "environments": {
         "source": "environments/environment.ts",
