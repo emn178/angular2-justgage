@@ -9,15 +9,15 @@ gulp.task('clean-dist', function (cb) {
   rimraf('dist', cb);
 });
 
-gulp.task('clean-tmp', ['tsc'], function (cb) {
+gulp.task('clean-tmp', ['ngc'], function (cb) {
   rimraf('tmp', cb);
 });
 
-gulp.task('tsc', ['copy'], function (cb) {
-  fs.createReadStream('src/tsconfig.json')
+gulp.task('ngc', ['copy'], function (cb) {
+  fs.createReadStream('src/tsconfig.build.json')
     .pipe(fs.createWriteStream('tmp/tsconfig.json'))
     .on('close', function(ex) {
-      exec('cd tmp && tsc -d', function (err, stdout, stderr) {
+      exec('cd tmp && ngc -p tsconfig.json', function (err, stdout, stderr) {
         if (stdout) {
           console.log(stdout);
         }
@@ -36,4 +36,4 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('tmp'));
 });
 
-gulp.task('default', ['clean-dist', 'tsc', 'clean-tmp']);
+gulp.task('default', ['clean-dist', 'ngc', 'clean-tmp']);
