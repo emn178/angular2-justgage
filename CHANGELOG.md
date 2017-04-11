@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.2.0 / 2017-04-11
+### Added
+- support to Angular 4.
+
 ## v0.1.3 / 2017-03-09
 ### Fixed
 - ERROR in JustgageModule is not an NgModule. #1
