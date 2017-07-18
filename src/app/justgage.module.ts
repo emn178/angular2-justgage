@@ -8,15 +8,8 @@ import { HttpModule } from '@angular/http';
 
 import { JustgageComponent } from './justgage.component';
 
-const components = [JustgageComponent];
-
 @NgModule({
-  declarations: components,
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  exports: components
+  declarations: [ JustgageComponent ],
+  exports: [ JustgageComponent ]
 })
 export class JustgageModule { }

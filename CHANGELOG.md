@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.2.1 / 2017-07-18
+### Fixed
+- browsermodule has already been loaded issue.
+
 ## v0.2.0 / 2017-04-11
 ### Added
 - support to Angular 4.
