@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.3.0 / 2017-11-28
+### Fixed
+- angular 5 warning and AOT build.
+
 ## v0.2.1 / 2017-07-18
 ### Fixed
 - browsermodule has already been loaded issue.

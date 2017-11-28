@@ -25,11 +25,17 @@ testem.log
 /typings
 
 # e2e
-/e2e/*.js
-/e2e/*.map
+/e2e/
 
 #System Files
 .DS_Store
 Thumbs.db
 
 /reports/
+/src/
+.editorconfig
+angular-cli.json
+gulpfile.js
+karma.conf.js
+protractor.conf.js
+tslint.json

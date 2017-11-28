@@ -15,6 +15,7 @@
   },
   "angularCompilerOptions": {
     "genDir": "../dist",
-    "entryModule": "src/app/justgage.module#JustgageModule"
+    "entryModule": "src/app/justgage.module#JustgageModule",
+    "skipTemplateCodegen": true    
   }
 }
